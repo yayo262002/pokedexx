@@ -3,6 +3,7 @@ const spinner = document.querySelector("#spinner");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
 
+
 let limit = 5;
 let offset = 1;
 
