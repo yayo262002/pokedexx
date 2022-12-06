@@ -1,112 +1,197 @@
 body {
-background-image: url(./tipos/4541983-ishmam-charmander-pokmon.png);
+  background: rgb(10, 4, 78);
+  background: linear-gradient(145deg, rgb(34, 114, 219) 50%, rgb(150, 203, 211) 90%);
+
 background-size: cover;
 text-align: center;
 }
-form{ 
-  display: inline-block;
-  width: 100%;
-  }
-.b-header-nav{
- width: 100%;
- height: 50px;
+.title{
  display: flex;
- align-items: center;
- left: 200px;
+ justify-content: center;
+}
+.title > img{
+  width: 60%;
+}
+.b-header-nav{
+
+ display: flex;
  justify-content: space-evenly;
+ flex-direction: row;
+ margin-bottom: 80px;
+}
+button{
+  background-color: transparent !important;
+  border: none;
 }
 
-.b-header-nav > a{
-  text-decoration: none;
-  margin-left: 5px;
+input{
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #fffefe;
+  background-color: transparent !important;
+  
 }
-
-.b-header-nav__item > img{
- width: 100%;
- height: 35px;
+::placeholder {
+  color: rgb(255, 255, 255);
+ 
 }
-
    
-h1 {
-  color: white;
+a:hover {
+  background-color: rgb(229, 218, 14);
+  
+  
+  border-radius: 100px;
+}
+a:active {
+  background-color: rgb(238, 241, 197);
+ 
+  
+  border-radius: 100px;
 }
 
-
-.pokemon-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  margin-top: 20px;
+.b-poke-card {
+  border: 7px solid black;
+  border-spacing: 10px;
+  width: 200px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px ;
+  align-content: center;
+  align-items: center;
+ 
+  border-radius: 20px;
+  background-color: rgb(207, 28, 28);
 }
 
-.pokemon-block,
-.pokemon-block-back {
-  border-radius: 10px;
-  padding: 10px;
-  background-color:rgb(197, 197, 250);
-  border-width: 20px;
-  border-style: solid;
-  border-color: black;
-  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-}
-
-
-.pokemon-block p {
-  margin: 5px;
-}
-
-.name {
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-#spinner {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.pagination {
-
-  margin-left: 340px;
-  margin-bottom: 50px;
-}
-
-.card-container {
-  position: relative;
+.b-poke-card-header {
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-
+  display: block;
 }
 
-.flip-card:hover .card-container {
-  transform: rotateY(180deg);
-}
-
-.pokemon-block,
-.pokemon-block-back {
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.b-poke-card-body {
+  display: flex;
+  flex-direction: column;
+  
  
 }
 
-.pokemon-block-back {
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0%;
+.b-poke-card__imgframe {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  margin-top: -60px;
+  margin-bottom: 80px;
 }
 
-.stat-container {
-  display: grid;
+.b-poke-card__img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 90px;
+}
+
+.b-poke-card__medio {
+ background-color: rgb(255, 255, 255);
+ border-radius: 100px;
+ position: absolute;
+ width: 150px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ border: solid 5px black;
+ z-index: 1;
+ margin-top: 92px;
+ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-size: 20px;
+}
+
+.b-poke-card__title {
+  
+  font-size: 24px;
   text-align: center;
+}
+
+.b-poke-card__title span {
+  font-weight: 300;
+  font-size: 12px; 
+}
+
+.b-poke-card__text {
+  color: var(--dark-gray);
+  font-size: 15px;
+  color:rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.b-poke-card__type {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.b-poke-card-footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+ width: 100%;
+ padding-top: 40px;
+  border-top: 5px solid black;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; 
+}
+
+.b-poke-card__skills {
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+}
+
+.b-poke-card__skills h3 {
+  letter-spacing: 1px;
+ 
+  font-weight: 500;
+}
+
+.b-poke-card__skills p {
+  letter-spacing: 1px;
+  font-size: 13px
+}
+
+
+.poke-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ 
+}
+
+
+.typeimg {
+  width: 45px;
+  height: 45px;
+
+}
+
+
+
+ul, li {
+  list-style-type: none;
+}
+
+
+
+
+.b-poke-card--bg-fire {
+  background-color: aquamarine;
+}
+
+.b-poke-card--bg-steel {
+  background-color: rgb(89, 53, 93);
 }
